@@ -1,15 +1,17 @@
 package com.example.glimonprot
 
 import android.app.Application
+import com.example.glimonprot.di.components.AppComponent
+import com.example.glimonprot.di.components.DaggerAppComponent
 import timber.log.Timber
 
 
-class BaseApplication  : Application() {
+class BaseApplication : Application() {
 
-//    val component: AppComponent by lazy {TODO()
-//        DaggerAppComponent.factory()
-//            .create(this)
-//    }
+    val component: AppComponent by lazy {
+        DaggerAppComponent.factory()
+            .create(this)
+    }
 
     override fun onCreate() {
         super.onCreate()
