@@ -44,7 +44,6 @@ import coil.compose.AsyncImage
 import com.example.glimonprot.R
 import kotlinx.coroutines.flow.StateFlow
 import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
-import com.example.glimonprot.domain.entities.UsersEntity
 import com.example.glimonprot.domain.model.FeedItem
 import com.example.glimonprot.presentation.bottomSheets.WriteReviewBottomSheet
 import com.example.glimonprot.presentation.components.CustomBottomSheetContainer
@@ -54,6 +53,7 @@ import com.example.glimonprot.presentation.components.LabelText
 import com.example.glimonprot.presentation.theme.TextFieldContainerColor
 import com.example.glimonprot.presentation.theme.TextFieldLabelColor
 import com.example.glimonprot.presentation.theme.YellowGlimon
+import stud.gilmon.data.local.entities.UsersEntity
 
 
 @Composable

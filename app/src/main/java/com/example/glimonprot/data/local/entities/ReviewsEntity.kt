@@ -1,4 +1,4 @@
-package com.example.glimonprot.domain.entities
+package com.example.glimonprot.data.local.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

@@ -18,7 +18,6 @@ import androidx.paging.compose.LazyPagingItems
 import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.StateFlow
-import com.example.glimonprot.domain.entities.UsersEntity
 import com.example.glimonprot.domain.model.FeedItem
 import com.example.glimonprot.presentation.ui.Screen
 import com.example.glimonprot.presentation.ui.Screen.Companion.KEY_AUTH_USER
@@ -30,6 +29,7 @@ import example.glimonprot.presentation.ui.feed.FeedSearchScreen
 import com.example.glimonprot.presentation.ui.profile.ProfileScreen
 import com.example.glimonprot.presentation.ui.support.ContactSupportScreen
 import com.example.glimonprot.presentation.ui.support.SupportScreen
+import stud.gilmon.data.local.entities.UsersEntity
 
 @Composable
 fun MainScreenNavGraph(

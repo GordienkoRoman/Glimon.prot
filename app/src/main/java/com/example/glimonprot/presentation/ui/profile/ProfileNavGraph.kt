@@ -7,11 +7,11 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
-import com.example.glimonprot.domain.entities.UsersEntity
 import com.example.glimonprot.presentation.ui.Screen
 import com.example.glimonprot.presentation.ui.profile.coupons.CouponsProfile
 import com.example.glimonprot.presentation.ui.profile.reviews.ReviewsProfile
 import com.example.glimonprot.presentation.ui.profile.settings.SettingsProfile
+import stud.gilmon.data.local.entities.UsersEntity
 
 @Composable
 fun ProfileNavGraph(

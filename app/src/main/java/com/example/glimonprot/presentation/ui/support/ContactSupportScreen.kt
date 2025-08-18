@@ -26,9 +26,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.flow.StateFlow
-import com.example.glimonprot.domain.entities.UsersEntity
 import com.example.glimonprot.presentation.components.CustomTextField2
 import com.example.glimonprot.presentation.components.TextWithLink
+import stud.gilmon.data.local.entities.UsersEntity
 
 @Composable
 fun ContactSupportScreen(

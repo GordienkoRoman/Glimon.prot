@@ -2,7 +2,7 @@ package com.example.glimonprot.domain.repository
 
 import com.example.glimonprot.domain.model.FeedItem
 import com.example.glimonprot.domain.model.ReviewItem
-import com.example.glimonprot.domain.entities.UsersEntity
+import stud.gilmon.data.local.entities.UsersEntity
 
 interface GlimonRepository {
 

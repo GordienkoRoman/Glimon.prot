@@ -25,7 +25,7 @@ import com.example.glimonprot.data.remote.RemoteUser
 import com.example.glimonprot.data.remote.userApi.GithubApi
 import com.example.glimonprot.data.remote.userApi.MailApi
 import com.example.glimonprot.domain.repository.GlimonRepository
-import com.example.glimonprot.domain.entities.UsersEntity
+import stud.gilmon.data.local.entities.UsersEntity
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -64,7 +64,7 @@ class LoginViewModel @Inject constructor(
         get() = loadingMutableStateFlow.asStateFlow()
 
 
-    private val _userFlow  = MutableStateFlow( UsersEntity(userId = ""))
+    private val _userFlow  = MutableStateFlow(UsersEntity(userId = ""))
     val userFlow
         get() = _userFlow.asStateFlow()
 

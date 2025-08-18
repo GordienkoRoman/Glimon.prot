@@ -56,8 +56,8 @@ import coil.compose.rememberAsyncImagePainter
 import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
 import com.example.glimonprot.BaseApplication
 import com.example.glimonprot.R
-import com.example.glimonprot.domain.entities.UsersEntity
 import com.example.glimonprot.presentation.theme.TextFieldLabelColor
+import stud.gilmon.data.local.entities.UsersEntity
 
 @Composable
 fun ProfileScreen(

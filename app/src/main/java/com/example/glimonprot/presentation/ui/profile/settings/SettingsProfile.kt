@@ -41,7 +41,6 @@ import com.vanpra.composematerialdialogs.datetime.date.DatePickerDefaults
 import com.vanpra.composematerialdialogs.datetime.date.datepicker
 import com.vanpra.composematerialdialogs.rememberMaterialDialogState
 import kotlinx.coroutines.launch
-import com.example.glimonprot.domain.entities.UsersEntity
 import com.example.glimonprot.presentation.bottomSheets.ChangeEmailBottomSheet
 import com.example.glimonprot.presentation.bottomSheets.ChangePasswordBottomSheet
 import com.example.glimonprot.presentation.bottomSheets.ChangePhoneNumberBottomSheet
@@ -54,6 +53,7 @@ import com.example.glimonprot.presentation.components.SelectButton
 import com.example.glimonprot.presentation.theme.DatePickerGray
 import com.example.glimonprot.presentation.theme.DatePickerLightGray
 import com.example.glimonprot.presentation.ui.profile.TOP_NAVIGATION_BAR_HEICHT
+import stud.gilmon.data.local.entities.UsersEntity
 import timber.log.Timber
 import java.time.LocalDate
 import java.util.Locale

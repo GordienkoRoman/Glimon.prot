@@ -4,8 +4,8 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
-import com.example.glimonprot.domain.entities.UsersEntity
 import com.example.glimonprot.domain.repository.GlimonRepository
+import stud.gilmon.data.local.entities.UsersEntity
 import javax.inject.Inject
 
 class ProfileViewModel @Inject constructor(

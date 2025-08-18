@@ -13,8 +13,8 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
-import com.example.glimonprot.domain.entities.UsersEntity
 import com.example.glimonprot.domain.repository.GlimonRepository
+import stud.gilmon.data.local.entities.UsersEntity
 import javax.inject.Inject
 
 class SettingsViewModel @Inject constructor(
