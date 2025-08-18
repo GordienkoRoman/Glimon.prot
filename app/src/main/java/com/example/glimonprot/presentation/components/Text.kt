@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.components
+package com.example.glimonprot.presentation.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
@@ -16,9 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import stud.gilmon.presentation.theme.DatePickerGray
-import stud.gilmon.presentation.theme.TextFieldContainerColor
-import stud.gilmon.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.theme.DatePickerGray
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
 
 @Preview
 @Composable

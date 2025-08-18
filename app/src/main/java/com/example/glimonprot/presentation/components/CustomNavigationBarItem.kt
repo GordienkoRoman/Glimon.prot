@@ -1,9 +1,8 @@
-package stud.gilmon.presentation.components
+package com.example.glimonprot.presentation.components
 
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
-import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.InteractionSource
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
@@ -11,12 +10,10 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
-import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ProvideTextStyle
 import androidx.compose.material3.Shapes
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
@@ -111,7 +108,7 @@ fun RowScope.CustomNavigationBarItem(
                 Modifier
                     .layoutId(IndicatorRippleLayoutIdTag)
                     .clip(NavigationBarTokens.ActiveIndicatorShape.toShape())
-                    .indication(offsetInteractionSource, rememberRipple())
+
             )
         }
         val indicator = @Composable {

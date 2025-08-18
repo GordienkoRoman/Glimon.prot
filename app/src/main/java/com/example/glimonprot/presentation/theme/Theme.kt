@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.theme
+package example.glimonprot.presentation.theme
 
 import android.app.Activity
 import android.os.Build
@@ -15,6 +15,8 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import com.example.glimonprot.presentation.theme.PurpleGrey80
+import com.example.glimonprot.presentation.theme.TextFieldContainerColor
 
 private val DarkColorScheme = darkColorScheme(
     primary = Color(0xFF161616),

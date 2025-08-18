@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.main
+package com.example.glimonprot.presentation.ui.main
 
 import android.net.Uri
 import androidx.annotation.StringRes
@@ -32,19 +32,19 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import androidx.paging.compose.LazyPagingItems
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import stud.gilmon.R
-import stud.gilmon.data.local.entities.UsersEntity
-import stud.gilmon.data.model.FeedItem
-import stud.gilmon.presentation.components.CustomDragHandle
-import stud.gilmon.presentation.components.CustomNavigationBar
-import stud.gilmon.presentation.theme.TextFieldLabelColor
-import stud.gilmon.presentation.ui.Screen
-import stud.gilmon.presentation.ui.feed.FeedItemComponent
-import stud.gilmon.presentation.ui.login.LoginScreen
+import com.example.glimonprot.R
+import com.example.glimonprot.domain.model.FeedItem
+import com.example.glimonprot.presentation.components.CustomDragHandle
+import com.example.glimonprot.presentation.components.CustomNavigationBar
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.ui.login.LoginScreen
+import com.example.glimonprot.domain.entities.UsersEntity
+import com.example.glimonprot.presentation.ui.Screen
+import example.glimonprot.presentation.ui.feed.FeedItemComponent
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

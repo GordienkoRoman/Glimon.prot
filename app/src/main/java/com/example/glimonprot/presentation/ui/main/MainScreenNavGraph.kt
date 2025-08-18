@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.main
+package com.example.glimonprot.presentation.ui.main
 
 import androidx.compose.animation.AnimatedContentTransitionScope
 import androidx.compose.animation.core.EaseIn
@@ -15,21 +15,21 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import androidx.paging.compose.LazyPagingItems
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
 import com.google.gson.Gson
 import kotlinx.coroutines.flow.StateFlow
-import stud.gilmon.data.local.entities.UsersEntity
-import stud.gilmon.data.model.FeedItem
-import stud.gilmon.presentation.ui.Screen
-import stud.gilmon.presentation.ui.Screen.Companion.KEY_AUTH_USER
-import stud.gilmon.presentation.ui.Screen.Companion.KEY_FEED_ITEM_INDEX
-import stud.gilmon.presentation.ui.Screen.Companion.KEY_FEED_SEARCH_INDEX
-import stud.gilmon.presentation.ui.feed.FeedItemScreen.FeedItemScreen
-import stud.gilmon.presentation.ui.feed.FeedScreen
-import stud.gilmon.presentation.ui.feed.FeedSearchScreen
-import stud.gilmon.presentation.ui.profile.ProfileScreen
-import stud.gilmon.presentation.ui.support.ContactSupportScreen
-import stud.gilmon.presentation.ui.support.SupportScreen
+import com.example.glimonprot.domain.entities.UsersEntity
+import com.example.glimonprot.domain.model.FeedItem
+import com.example.glimonprot.presentation.ui.Screen
+import com.example.glimonprot.presentation.ui.Screen.Companion.KEY_AUTH_USER
+import com.example.glimonprot.presentation.ui.Screen.Companion.KEY_FEED_ITEM_INDEX
+import com.example.glimonprot.presentation.ui.Screen.Companion.KEY_FEED_SEARCH_INDEX
+import example.glimonprot.presentation.ui.feed.FeedItemScreen.FeedItemScreen
+import com.example.glimonprot.presentation.ui.feed.FeedScreen
+import example.glimonprot.presentation.ui.feed.FeedSearchScreen
+import com.example.glimonprot.presentation.ui.profile.ProfileScreen
+import com.example.glimonprot.presentation.ui.support.ContactSupportScreen
+import com.example.glimonprot.presentation.ui.support.SupportScreen
 
 @Composable
 fun MainScreenNavGraph(

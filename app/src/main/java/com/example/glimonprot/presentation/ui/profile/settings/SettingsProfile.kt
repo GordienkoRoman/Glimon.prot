@@ -1,5 +1,7 @@
-package stud.gilmon.presentation.ui.profile.settings
+package com.example.glimonprot.presentation.ui.profile.settings
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -33,25 +35,25 @@ import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
 import com.vanpra.composematerialdialogs.MaterialDialog
 import com.vanpra.composematerialdialogs.datetime.date.DatePickerDefaults
 import com.vanpra.composematerialdialogs.datetime.date.datepicker
 import com.vanpra.composematerialdialogs.rememberMaterialDialogState
 import kotlinx.coroutines.launch
-import stud.gilmon.data.local.entities.UsersEntity
+import com.example.glimonprot.domain.entities.UsersEntity
 import com.example.glimonprot.presentation.bottomSheets.ChangeEmailBottomSheet
 import com.example.glimonprot.presentation.bottomSheets.ChangePasswordBottomSheet
-import stud.gilmon.presentation.bottomSheets.ChangePhoneNumberBottomSheet
-import stud.gilmon.presentation.bottomSheets.ChooseFamilyStatusBottomSheet
-import stud.gilmon.presentation.bottomSheets.ChooseGenderBottomSheet
-import stud.gilmon.presentation.components.CustomButton
-import stud.gilmon.presentation.components.CustomTextField
-import stud.gilmon.presentation.components.LabelText
-import stud.gilmon.presentation.components.SelectButton
-import stud.gilmon.presentation.theme.DatePickerGray
-import stud.gilmon.presentation.theme.DatePickerLightGray
-import stud.gilmon.presentation.ui.profile.TOP_NAVIGATION_BAR_HEICHT
+import com.example.glimonprot.presentation.bottomSheets.ChangePhoneNumberBottomSheet
+import com.example.glimonprot.presentation.bottomSheets.ChooseFamilyStatusBottomSheet
+import com.example.glimonprot.presentation.bottomSheets.ChooseGenderBottomSheet
+import com.example.glimonprot.presentation.components.CustomButton
+import com.example.glimonprot.presentation.components.CustomTextField
+import com.example.glimonprot.presentation.components.LabelText
+import com.example.glimonprot.presentation.components.SelectButton
+import com.example.glimonprot.presentation.theme.DatePickerGray
+import com.example.glimonprot.presentation.theme.DatePickerLightGray
+import com.example.glimonprot.presentation.ui.profile.TOP_NAVIGATION_BAR_HEICHT
 import timber.log.Timber
 import java.time.LocalDate
 import java.util.Locale
@@ -90,10 +92,12 @@ fun SettingsProfile(
                     .fillMaxWidth()
                     .size(15.dp)
             )
-            PersonalData(
-                viewModel = viewModel,
-                user
-            )
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                PersonalData(
+                    viewModel = viewModel,
+                    user
+                )
+            }
         }
         item {
             AccountSettings(
@@ -114,6 +118,7 @@ fun SettingsProfile(
 }
 
 
+@RequiresApi(Build.VERSION_CODES.O)
 @Composable
 fun PersonalData(
     viewModel: SettingsViewModel,

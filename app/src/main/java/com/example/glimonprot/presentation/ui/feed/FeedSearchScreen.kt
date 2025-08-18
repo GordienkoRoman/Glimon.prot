@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.feed
+package example.glimonprot.presentation.ui.feed
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -30,13 +30,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.paging.compose.LazyPagingItems
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
-import stud.gilmon.R
-import stud.gilmon.data.model.FeedItem
-import stud.gilmon.presentation.components.CustomText
-import stud.gilmon.presentation.components.LabelText
-import stud.gilmon.presentation.theme.TextFieldContainerColor
-import stud.gilmon.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.R
+import com.example.glimonprot.domain.model.FeedItem
+import com.example.glimonprot.presentation.components.CustomText
+import com.example.glimonprot.presentation.components.LabelText
+import com.example.glimonprot.presentation.theme.TextFieldContainerColor
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.ui.feed.FeedViewModel
 
 @Composable
 fun FeedSearchScreen(

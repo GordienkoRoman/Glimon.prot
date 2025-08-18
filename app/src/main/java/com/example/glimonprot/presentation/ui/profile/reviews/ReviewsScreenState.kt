@@ -1,6 +1,6 @@
-package stud.gilmon.presentation.ui.profile.reviews
+package com.example.glimonprot.presentation.ui.profile.reviews
 
-import stud.gilmon.data.model.ReviewItem
+import com.example.glimonprot.domain.model.ReviewItem
 
 sealed class ReviewsScreenState {
 

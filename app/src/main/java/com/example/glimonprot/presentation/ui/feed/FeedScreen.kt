@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.feed
+package com.example.glimonprot.presentation.ui.feed
 
 import android.app.Activity
 import android.content.Intent
@@ -48,17 +48,18 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.paging.compose.LazyPagingItems
+import com.example.glimonprot.R
 import kotlinx.coroutines.flow.StateFlow
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
-import stud.gilmon.R
-import stud.gilmon.data.local.entities.UsersEntity
-import stud.gilmon.data.model.FeedItem
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.domain.entities.UsersEntity
+import com.example.glimonprot.domain.model.FeedItem
 import com.example.glimonprot.presentation.bottomSheets.ChangeLocationBottomSheet
-import stud.gilmon.presentation.components.CustomButton
-import stud.gilmon.presentation.components.SelectButton
-import stud.gilmon.presentation.components.TwoRowsTopAppBar
-import stud.gilmon.presentation.theme.TextFieldContainerColor
-import stud.gilmon.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.components.CustomButton
+import com.example.glimonprot.presentation.components.SelectButton
+import com.example.glimonprot.presentation.components.TwoRowsTopAppBar
+import com.example.glimonprot.presentation.theme.TextFieldContainerColor
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
+import example.glimonprot.presentation.ui.feed.FeedItemComponent
 import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)

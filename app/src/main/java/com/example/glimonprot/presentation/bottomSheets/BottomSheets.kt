@@ -8,9 +8,9 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import stud.gilmon.presentation.components.CustomButton
-import stud.gilmon.presentation.theme.TextFieldContainerColor
-import stud.gilmon.presentation.theme.YellowGlimon
+import com.example.glimonprot.presentation.components.CustomButton
+import com.example.glimonprot.presentation.theme.TextFieldContainerColor
+import com.example.glimonprot.presentation.theme.YellowGlimon
 
 
 @Composable

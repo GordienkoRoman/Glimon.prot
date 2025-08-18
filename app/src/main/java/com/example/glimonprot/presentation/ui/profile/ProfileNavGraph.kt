@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.profile
+package com.example.glimonprot.presentation.ui.profile
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.LazyListState
@@ -6,12 +6,12 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
-import stud.gilmon.data.local.entities.UsersEntity
-import stud.gilmon.presentation.ui.Screen
-import stud.gilmon.presentation.ui.profile.coupons.CouponsProfile
-import stud.gilmon.presentation.ui.profile.reviews.ReviewsProfile
-import stud.gilmon.presentation.ui.profile.settings.SettingsProfile
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.domain.entities.UsersEntity
+import com.example.glimonprot.presentation.ui.Screen
+import com.example.glimonprot.presentation.ui.profile.coupons.CouponsProfile
+import com.example.glimonprot.presentation.ui.profile.reviews.ReviewsProfile
+import com.example.glimonprot.presentation.ui.profile.settings.SettingsProfile
 
 @Composable
 fun ProfileNavGraph(

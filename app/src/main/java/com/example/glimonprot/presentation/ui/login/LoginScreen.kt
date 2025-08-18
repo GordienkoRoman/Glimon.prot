@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.login
+package com.example.glimonprot.presentation.ui.login
 
 import android.content.Intent
 import android.net.Uri
@@ -38,24 +38,25 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
 import com.google.gson.Gson
 import net.openid.appauth.AuthorizationException
 import net.openid.appauth.AuthorizationResponse
-import stud.gilmon.R
+import com.example.glimonprot.R
+import com.example.glimonprot.data.oauth.GithubAuthConfig
+import com.example.glimonprot.data.oauth.MailAuthConfig
+import com.example.glimonprot.presentation.components.CustomText
+import com.example.glimonprot.presentation.components.CustomTextField
+import com.example.glimonprot.presentation.components.LabelText
+import com.example.glimonprot.presentation.components.SocialNetworkIcon
+import com.example.glimonprot.presentation.components.TextWithLink
+import com.example.glimonprot.presentation.theme.BlueVK
+import com.example.glimonprot.presentation.theme.OrangeOdnoklassniki
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.theme.YellowGlimon
+import com.example.glimonprot.presentation.ui.Screen
+import example.glimonprot.presentation.ui.login.LoginViewModel
 import stud.gilmon.base.utils.launchAndCollectIn
-import stud.gilmon.data.oauth.GithubAuthConfig
-import stud.gilmon.data.oauth.MailAuthConfig
-import stud.gilmon.presentation.components.CustomText
-import stud.gilmon.presentation.components.CustomTextField
-import stud.gilmon.presentation.components.LabelText
-import stud.gilmon.presentation.components.SocialNetworkIcon
-import stud.gilmon.presentation.components.TextWithLink
-import stud.gilmon.presentation.theme.BlueVK
-import stud.gilmon.presentation.theme.OrangeOdnoklassniki
-import stud.gilmon.presentation.theme.TextFieldLabelColor
-import stud.gilmon.presentation.theme.YellowGlimon
-import stud.gilmon.presentation.ui.Screen
 
 @Composable
 fun LoginScreen(

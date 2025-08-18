@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.profile.reviews
+package com.example.glimonprot.presentation.ui.profile.reviews
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -39,16 +39,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
-import stud.gilmon.R
-import stud.gilmon.data.model.ReviewItem
-import stud.gilmon.presentation.components.CustomBottomSheetContainer
-import stud.gilmon.presentation.components.CustomList
-import stud.gilmon.presentation.components.CustomText
-import stud.gilmon.presentation.components.LabelText
-import stud.gilmon.presentation.components.SelectButton
-import stud.gilmon.presentation.theme.TextFieldLabelColor
-import stud.gilmon.presentation.ui.profile.TOP_NAVIGATION_BAR_HEICHT
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.R
+import com.example.glimonprot.domain.model.ReviewItem
+import com.example.glimonprot.presentation.components.CustomBottomSheetContainer
+import com.example.glimonprot.presentation.components.CustomList
+import com.example.glimonprot.presentation.components.CustomText
+import com.example.glimonprot.presentation.components.LabelText
+import com.example.glimonprot.presentation.components.SelectButton
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.ui.profile.TOP_NAVIGATION_BAR_HEICHT
 
 @Composable
 fun ReviewsProfile(userId: String, lazyListState: LazyListState, factory: ViewModelFactory) {

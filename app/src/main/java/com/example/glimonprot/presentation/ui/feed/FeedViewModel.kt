@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.feed
+package com.example.glimonprot.presentation.ui.feed
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
@@ -12,19 +12,18 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.update
-import stud.gilmon.data.remote.UnsplashDto
-import stud.gilmon.domain.DataStoreRepository
-import stud.gilmon.domain.RoomRepository
 import javax.inject.Inject
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.*
-import stud.gilmon.data.model.FeedItem
+import com.example.glimonprot.domain.model.FeedItem
+import com.example.glimonprot.domain.repository.GlimonRepository
 
 @OptIn(FlowPreview::class)
 class FeedViewModel @Inject constructor(
     context: Context,
-    private val dataStoreRepository: DataStoreRepository,
-    private val roomRepository: RoomRepository,
+    //TODO()
+    private val dataStoreRepository: GlimonRepository,
+    private val roomRepository: GlimonRepository,
 ) : ViewModel() {
     private val _searchText = MutableStateFlow("")
     val searchText = _searchText.asStateFlow()

@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui
+package com.example.glimonprot.presentation.ui
 
 
 sealed class Screen(val route: String) {

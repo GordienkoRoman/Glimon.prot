@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.feed.FeedItemScreen
+package example.glimonprot.presentation.ui.feed.FeedItemScreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -41,19 +41,19 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
+import com.example.glimonprot.R
 import kotlinx.coroutines.flow.StateFlow
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
-import stud.gilmon.R
-import stud.gilmon.data.local.entities.UsersEntity
-import stud.gilmon.data.model.FeedItem
-import stud.gilmon.presentation.bottomSheets.WriteReviewBottomSheet
-import stud.gilmon.presentation.components.CustomBottomSheetContainer
-import stud.gilmon.presentation.components.CustomButton
-import stud.gilmon.presentation.components.CustomText
-import stud.gilmon.presentation.components.LabelText
-import stud.gilmon.presentation.theme.TextFieldContainerColor
-import stud.gilmon.presentation.theme.TextFieldLabelColor
-import stud.gilmon.presentation.theme.YellowGlimon
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.domain.entities.UsersEntity
+import com.example.glimonprot.domain.model.FeedItem
+import com.example.glimonprot.presentation.bottomSheets.WriteReviewBottomSheet
+import com.example.glimonprot.presentation.components.CustomBottomSheetContainer
+import com.example.glimonprot.presentation.components.CustomButton
+import com.example.glimonprot.presentation.components.CustomText
+import com.example.glimonprot.presentation.components.LabelText
+import com.example.glimonprot.presentation.theme.TextFieldContainerColor
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.theme.YellowGlimon
 
 
 @Composable
@@ -67,16 +67,24 @@ fun FeedItemScreen(
     val viewModel: FeedItemViewModel = viewModel(factory = factory)
     val screenHeight = configuration.screenHeightDp.dp
     val height = remember { mutableStateOf(screenHeight - 100.dp) }
+    //TODO()
     val feedItem = FeedItem(
-        companyName = feedItem.companyName ?: "name",
-        promotionName = feedItem.promotionName ?: "name",
-        description = feedItem.location ?: "Description",
-        location =feedItem.description?: "Location",
+        companyName = "name",
+        promotionName =  "name",
+        description = "Description",
+        location =  "Location",
         imgUrl = feedItem.imgUrl
     )
+//    val feedItem = FeedItem(
+//        companyName = feedItem.companyName ?: "name",
+//        promotionName = feedItem.promotionName ?: "name",
+//        description = feedItem.location ?: "Description",
+//        location =feedItem.description?: "Location",
+//        imgUrl = feedItem.imgUrl
+//    )
     Surface {
         Image(
-            painter = painterResource(id = R.drawable.googlemap),
+            painter = painterResource(id = R.drawable.ic_launcher_foreground),
             modifier = Modifier
                 .fillMaxSize(),
             contentDescription = "Map image"
@@ -230,7 +238,7 @@ fun LinksRow() {
         {
 
         }
-        ButtonWithIcon(painter = painterResource(id = R.drawable.baseline_language_24))
+        ButtonWithIcon(painter = painterResource(id = R.drawable.ic_launcher_foreground))
         {
 
         }

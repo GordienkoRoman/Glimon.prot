@@ -1,16 +1,14 @@
-package stud.gilmon.presentation.components
+package com.example.glimonprot.presentation.components
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.RadioButtonDefaults
@@ -34,8 +32,6 @@ fun CustomList(
     showModalBottomSheet: MutableState<Boolean>,
     onDismissRequest: () -> Unit = {}
 ) {
-    val scope = rememberCoroutineScope()
-    val (selectedOption, onOptionSelected) = remember { mutableStateOf(radioOptions[0]) }
     Column(Modifier.selectableGroup()) {
         Text(
             text = "Choose coupon status",
@@ -43,7 +39,7 @@ fun CustomList(
             modifier = Modifier.padding(vertical = 15.dp)
 
         )
-        Divider( thickness = 1.dp, color = Color.LightGray)
+        HorizontalDivider(thickness = 1.dp, color = Color.LightGray)
 
         radioOptions.forEach { text ->
             Row(

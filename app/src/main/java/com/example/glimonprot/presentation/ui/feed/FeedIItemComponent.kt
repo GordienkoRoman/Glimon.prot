@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.feed
+package example.glimonprot.presentation.ui.feed
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -14,23 +14,20 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.SideEffect
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import coil.compose.SubcomposeAsyncImage
-import stud.gilmon.R
-import stud.gilmon.data.model.FeedItem
-import stud.gilmon.data.remote.UnsplashDto
-import stud.gilmon.presentation.components.CustomText
-import stud.gilmon.presentation.components.IconWithText
-import stud.gilmon.presentation.components.LabelText
+import com.example.glimonprot.R
+import com.example.glimonprot.domain.model.FeedItem
+import com.example.glimonprot.presentation.components.CustomText
+import com.example.glimonprot.presentation.components.IconWithText
+import com.example.glimonprot.presentation.components.LabelText
 
 @Composable
 fun FeedItemComponent(
@@ -86,7 +83,7 @@ fun FeedItemComponent(
             CustomText(text = feedItem.description)
             CustomText(text = feedItem.location)
         }
-        Divider(thickness = 1.dp, color = Color.DarkGray)
+        HorizontalDivider(thickness = 1.dp, color = Color.DarkGray)
 
         FeedItemBottom(feedItem)
     }

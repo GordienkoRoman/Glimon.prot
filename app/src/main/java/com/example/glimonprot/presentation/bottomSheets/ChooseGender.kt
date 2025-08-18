@@ -1,9 +1,9 @@
-package stud.gilmon.presentation.bottomSheets
+package com.example.glimonprot.presentation.bottomSheets
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
-import stud.gilmon.presentation.components.CustomBottomSheetContainer
-import stud.gilmon.presentation.components.CustomList
+import com.example.glimonprot.presentation.components.CustomBottomSheetContainer
+import com.example.glimonprot.presentation.components.CustomList
 
 @Composable
 fun ChooseGenderBottomSheet(

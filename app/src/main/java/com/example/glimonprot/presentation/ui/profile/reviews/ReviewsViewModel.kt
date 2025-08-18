@@ -1,24 +1,21 @@
-package stud.gilmon.presentation.ui.profile.reviews
+package com.example.glimonprot.presentation.ui.profile.reviews
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import stud.gilmon.data.model.FeedItem
-import stud.gilmon.data.model.ReviewItem
-import stud.gilmon.domain.RoomRepository
-import stud.gilmon.presentation.ui.profile.coupons.CouponsScreenState
+import com.example.glimonprot.domain.model.ReviewItem
+import com.example.glimonprot.domain.repository.GlimonRepository
 import javax.inject.Inject
 
 class ReviewsViewModel @Inject constructor(
-    val roomRepository: RoomRepository,
+    val glimonRepository: GlimonRepository,
     val userId: String
 ) : ViewModel()
 {
@@ -26,7 +23,7 @@ class ReviewsViewModel @Inject constructor(
     val screenState = getReviews(userId).map { ReviewsScreenState.Reviews(reviews = it) }
 
     private fun getReviews(userId:String): StateFlow<List<ReviewItem>> = flow {
-        val reviews = roomRepository.getReviews(userId)
+        val reviews = glimonRepository.getReviews(userId)
         emit(reviews)
     }.stateIn(
         scope = coroutineScope,
@@ -35,7 +32,7 @@ class ReviewsViewModel @Inject constructor(
     )
     fun deleteReview(reviewItem: ReviewItem,userId: String){
         viewModelScope.launch {
-            roomRepository.deleteReview(reviewItem, userId)
+            glimonRepository.deleteReview(reviewItem, userId)
         }
     }
 }

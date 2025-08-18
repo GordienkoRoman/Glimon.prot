@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.components
+package com.example.glimonprot.presentation.components
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -16,8 +16,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
-import stud.gilmon.R
-import stud.gilmon.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
 
 @Composable
 fun IconWithText(

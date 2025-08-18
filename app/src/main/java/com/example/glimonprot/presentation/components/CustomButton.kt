@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.components
+package com.example.glimonprot.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material3.Button
@@ -22,9 +23,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import stud.gilmon.presentation.theme.RedGlimon
-import stud.gilmon.presentation.theme.SpacerColor
-import stud.gilmon.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.theme.RedGlimon
+import com.example.glimonprot.presentation.theme.SpacerColor
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
 
 @Composable
 fun CustomButton(
@@ -97,7 +98,7 @@ fun LinkButton(text: String, icon: ImageVector, onClick: () -> Unit = {}) {
             modifier = Modifier.weight(1f)
         )
         Icon(
-            imageVector = Icons.Filled.ArrowForward,
+            imageVector = Icons.AutoMirrored.Filled.ArrowForward,
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSecondary
         )

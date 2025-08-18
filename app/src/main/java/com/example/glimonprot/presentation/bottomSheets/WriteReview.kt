@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.bottomSheets
+package com.example.glimonprot.presentation.bottomSheets
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -17,12 +17,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import stud.gilmon.presentation.components.CustomBottomSheetContainer
-import stud.gilmon.presentation.components.CustomButton
-import stud.gilmon.presentation.components.CustomTextField
-import stud.gilmon.presentation.components.LabelText
-import stud.gilmon.presentation.theme.YellowGlimon
-import stud.gilmon.presentation.ui.login.CloseButton
+import com.example.glimonprot.presentation.components.CustomBottomSheetContainer
+import com.example.glimonprot.presentation.components.CustomButton
+import com.example.glimonprot.presentation.components.CustomTextField
+import com.example.glimonprot.presentation.components.LabelText
+import com.example.glimonprot.presentation.theme.YellowGlimon
+import com.example.glimonprot.presentation.ui.login.CloseButton
 
 @Composable
 fun WriteReviewBottomSheet(

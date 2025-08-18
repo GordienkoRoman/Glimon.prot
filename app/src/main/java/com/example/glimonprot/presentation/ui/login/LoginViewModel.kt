@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.login
+package example.glimonprot.presentation.ui.login
 
 import android.content.Context
 import android.content.Intent
@@ -13,31 +13,25 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
-import net.openid.appauth.AuthorizationException
 import net.openid.appauth.AuthorizationService
 import net.openid.appauth.TokenRequest
-import stud.gilmon.R
-import stud.gilmon.data.local.entities.UsersEntity
-import stud.gilmon.data.oauth.AuthConfig
-import stud.gilmon.data.oauth.AuthRepository
-import stud.gilmon.data.oauth.GithubAuthConfig
-import stud.gilmon.data.oauth.InitialConfig
-import stud.gilmon.data.oauth.MailAuthConfig
-import stud.gilmon.data.oauth.TokenStorage
-import stud.gilmon.data.remote.RemoteUser
-import stud.gilmon.data.remote.userApi.GithubApi
-import stud.gilmon.data.remote.userApi.MailApi
-import stud.gilmon.data.remote.userApi.UserRepository
-import stud.gilmon.domain.DataStoreRepository
-import stud.gilmon.domain.RoomRepository
+import com.example.glimonprot.R
+import com.example.glimonprot.data.oauth.AuthConfig
+import com.example.glimonprot.data.oauth.AuthRepository
+import com.example.glimonprot.data.oauth.GithubAuthConfig
+import com.example.glimonprot.data.oauth.InitialConfig
+import com.example.glimonprot.data.oauth.MailAuthConfig
+import com.example.glimonprot.data.remote.RemoteUser
+import com.example.glimonprot.data.remote.userApi.GithubApi
+import com.example.glimonprot.data.remote.userApi.MailApi
+import com.example.glimonprot.domain.repository.GlimonRepository
+import com.example.glimonprot.domain.entities.UsersEntity
 import timber.log.Timber
 import javax.inject.Inject
 
 
 class LoginViewModel @Inject constructor(
-    private val roomRepository: RoomRepository,
-    private val dataStoreRepository: DataStoreRepository,
-    private val userRepository: UserRepository,
+    private val glimonRepository: GlimonRepository,
     private val mailApi: MailApi,
     private val githubApi: GithubApi,
     context: Context
@@ -83,14 +77,14 @@ class LoginViewModel @Inject constructor(
 
     private fun setUser(login: String) {
         viewModelScope.launch {
-            dataStoreRepository.setUser(login)
+            glimonRepository.setPrefUser(login)
         }
         loadUserInfo(login)
     }
 
     fun getUser(login: String) {
         viewModelScope.launch {
-            _userFlow.value = roomRepository.getUser(login)?: UsersEntity(userId = "")
+            _userFlow.value = glimonRepository.getUser(login)?: UsersEntity(userId = "")
         }
     }
 
@@ -116,7 +110,7 @@ class LoginViewModel @Inject constructor(
                     }
 
                     MailAuthConfig.login -> {
-                        roomRepository.upsertUser(
+                        glimonRepository.upsertUser(
                             UsersEntity(reviewId = 1, userId = "mail.ru")
                         )
                         authSuccessEventChannel.send(Unit)
@@ -142,7 +136,7 @@ class LoginViewModel @Inject constructor(
                 val it = user as RemoteUser.RemoteGithubUser
                 viewModelScope.launch {
                     try {
-                        roomRepository.upsertUser(
+                        glimonRepository.upsertUser(
                             UsersEntity(
                                 firstName = it.name ?: "",
                                 aboutMe = it.bio ?: "",
@@ -163,7 +157,7 @@ class LoginViewModel @Inject constructor(
                 val it = user as RemoteUser.RemoteMailUser
                 viewModelScope.launch {
                     try {
-                        roomRepository.upsertUser(
+                        glimonRepository.upsertUser(
 //                        UsersEntity(
 //                            it.first_name ?: "",
 //                            it.last_name ?: "",
@@ -214,7 +208,7 @@ class LoginViewModel @Inject constructor(
     fun openLoginPage(login: String) {
         if (_userFlow.value.userId != null) {
             viewModelScope.launch {
-                dataStoreRepository.setUser(login)
+                glimonRepository.setPrefUser(login)
                 authSuccessEventChannel.send(Unit)
             }
         } else {

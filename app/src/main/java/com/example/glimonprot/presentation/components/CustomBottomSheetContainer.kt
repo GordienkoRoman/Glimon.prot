@@ -1,13 +1,11 @@
-package stud.gilmon.presentation.components
+package com.example.glimonprot.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -26,7 +24,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import stud.gilmon.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -44,7 +42,6 @@ fun CustomBottomSheetContainer(
         onDismissRequest = { onDismissRequest() },
         sheetState = bottomSheetState,
         scrimColor = BottomSheetDefaults.ScrimColor,
-        windowInsets = WindowInsets.safeDrawing,
         dragHandle = { CustomDragHandle() },
     )
     {

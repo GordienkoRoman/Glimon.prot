@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.support
+package com.example.glimonprot.presentation.ui.support
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -26,9 +26,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.flow.StateFlow
-import stud.gilmon.data.local.entities.UsersEntity
-import stud.gilmon.presentation.components.CustomTextField2
-import stud.gilmon.presentation.components.TextWithLink
+import com.example.glimonprot.domain.entities.UsersEntity
+import com.example.glimonprot.presentation.components.CustomTextField2
+import com.example.glimonprot.presentation.components.TextWithLink
 
 @Composable
 fun ContactSupportScreen(

@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.profile.coupons
+package com.example.glimonprot.presentation.ui.profile.coupons
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -19,8 +19,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.Card
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -40,16 +40,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.SubcomposeAsyncImage
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
-import stud.gilmon.R
-import stud.gilmon.data.model.FeedItem
-import stud.gilmon.presentation.components.CustomBottomSheetContainer
-import stud.gilmon.presentation.components.CustomList
-import stud.gilmon.presentation.components.CustomText
-import stud.gilmon.presentation.components.LabelText
-import stud.gilmon.presentation.components.SelectButton
-import stud.gilmon.presentation.theme.TextFieldLabelColor
-import stud.gilmon.presentation.ui.profile.TOP_NAVIGATION_BAR_HEICHT
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.R
+import com.example.glimonprot.domain.model.FeedItem
+import com.example.glimonprot.presentation.components.CustomBottomSheetContainer
+import com.example.glimonprot.presentation.components.CustomList
+import com.example.glimonprot.presentation.components.CustomText
+import com.example.glimonprot.presentation.components.LabelText
+import com.example.glimonprot.presentation.components.SelectButton
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.presentation.ui.profile.TOP_NAVIGATION_BAR_HEICHT
 
 
 @Composable
@@ -179,7 +179,7 @@ fun CouponItem(feedItem: FeedItem,userId: String,viewModel: CouponsViewModel) {
             CustomText(text = feedItem.description)
             CustomText(text = feedItem.location)
         }
-        Divider(thickness = 1.dp, color = Color.DarkGray)
+        HorizontalDivider(thickness = 1.dp, color = Color.DarkGray)
 
         // FeedItemBottom(photo)
     }

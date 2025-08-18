@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.bottomSheets
+package com.example.glimonprot.presentation.bottomSheets
 
 import androidx.compose.material3.Divider
 import androidx.compose.material3.Text
@@ -8,10 +8,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.example.glimonprot.presentation.bottomSheets.BottomSheetButtons
-import stud.gilmon.presentation.components.CustomBottomSheetContainer
-import stud.gilmon.presentation.components.CustomTextField
-import stud.gilmon.presentation.components.LabelText
+import com.example.glimonprot.presentation.components.CustomBottomSheetContainer
+import com.example.glimonprot.presentation.components.CustomTextField
+import com.example.glimonprot.presentation.components.LabelText
 
 @Composable
 fun ChangePhoneNumberBottomSheet(

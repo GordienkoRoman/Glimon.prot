@@ -1,8 +1,7 @@
-package stud.gilmon.presentation.ui.profile.settings
+package com.example.glimonprot.presentation.ui.profile.settings
 
 import android.content.Context
 import android.widget.Toast
-import androidx.compose.ui.platform.LocalContext
 import androidx.datastore.core.IOException
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
@@ -14,14 +13,12 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
-import stud.gilmon.data.local.entities.UsersEntity
-import stud.gilmon.domain.DataStoreRepository
-import stud.gilmon.domain.RoomRepository
+import com.example.glimonprot.domain.entities.UsersEntity
+import com.example.glimonprot.domain.repository.GlimonRepository
 import javax.inject.Inject
 
 class SettingsViewModel @Inject constructor(
-    private val roomRepository: RoomRepository,
-    private val dataStoreRepository: DataStoreRepository,
+    private val glimonRepository: GlimonRepository,
     val context: Context
 ) : ViewModel(){
 
@@ -31,14 +28,14 @@ class SettingsViewModel @Inject constructor(
 
     fun updateUserData(usersEntity: UsersEntity){
         viewModelScope.launch {
-            roomRepository.upsertUser(usersEntity)
+            glimonRepository.upsertUser(usersEntity)
             Toast.makeText(context, "User updated", Toast.LENGTH_LONG).show()
         }
     }
 
     fun setUser(onClick: () ->Unit) {
         viewModelScope.launch {
-            dataStoreRepository.setUser("")
+            glimonRepository.setPrefUser("")
             onClick()
         }
     }

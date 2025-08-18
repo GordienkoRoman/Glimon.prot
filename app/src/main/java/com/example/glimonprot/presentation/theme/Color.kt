@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.theme
+package com.example.glimonprot.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

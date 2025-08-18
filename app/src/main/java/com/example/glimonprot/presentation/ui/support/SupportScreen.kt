@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.support
+package com.example.glimonprot.presentation.ui.support
 
 import android.content.Intent
 import android.net.Uri
@@ -35,11 +35,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat.startActivity
-import stud.gilmon.R
-import stud.gilmon.presentation.components.CustomButton
-import stud.gilmon.presentation.components.CustomText
-import stud.gilmon.presentation.components.LinkButton
-import stud.gilmon.presentation.components.SocialNetworkIcon
+import com.example.glimonprot.presentation.components.CustomButton
+import com.example.glimonprot.presentation.components.CustomText
+import com.example.glimonprot.R
+import com.example.glimonprot.presentation.components.LinkButton
+import com.example.glimonprot.presentation.components.SocialNetworkIcon
 
 
 @Composable

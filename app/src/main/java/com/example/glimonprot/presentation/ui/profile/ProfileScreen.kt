@@ -1,4 +1,4 @@
-package stud.gilmon.presentation.ui.profile
+package com.example.glimonprot.presentation.ui.profile
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
@@ -34,7 +34,6 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -54,11 +53,11 @@ import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberAsyncImagePainter
-import stud.gilmon.di.viewModelFactory.ViewModelFactory
-import stud.gilmon.BaseApplication
-import stud.gilmon.R
-import stud.gilmon.data.local.entities.UsersEntity
-import stud.gilmon.presentation.theme.TextFieldLabelColor
+import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
+import com.example.glimonprot.BaseApplication
+import com.example.glimonprot.R
+import com.example.glimonprot.domain.entities.UsersEntity
+import com.example.glimonprot.presentation.theme.TextFieldLabelColor
 
 @Composable
 fun ProfileScreen(
@@ -68,28 +67,28 @@ fun ProfileScreen(
     toggleTheme: () -> Unit,
     onClick: () -> Unit
 ) {
-    val component =
-        (LocalContext.current.applicationContext as BaseApplication).component
-            .profileScreenComponentFactory()
-            .create(user.userId)
-    val viewModelFactory = component.getViewModelFactory()
-    val viewModel: ProfileViewModel = viewModel(factory = viewModelFactory)
-    val lazyListStateList: List<LazyListState> = listOf(
-        rememberLazyListState(),
-        rememberLazyListState(),
-        rememberLazyListState()
-    )
-    //val  user = viewModel.getUser(login)
-    MainContent(
-        darkTheme = darkTheme,
-        user = user,
-        navController = navController,
-        toggleTheme = { toggleTheme() },
-        viewModelFactory = viewModelFactory,
-        viewModel = viewModel,
-        lazyListStateList,
-        onClick = onClick
-    )
+//    val component =
+//        (LocalContext.current.applicationContext as BaseApplication).component
+//            .profileScreenComponentFactory()
+//            .create(user.userId)
+//    val viewModelFactory = component.getViewModelFactory()
+//    val viewModel: ProfileViewModel = viewModel(factory = viewModelFactory)
+//    val lazyListStateList: List<LazyListState> = listOf(
+//        rememberLazyListState(),
+//        rememberLazyListState(),
+//        rememberLazyListState()
+//    )
+//    //val  user = viewModel.getUser(login)
+//    MainContent(
+//        darkTheme = darkTheme,
+//        user = user,
+//        navController = navController,
+//        toggleTheme = { toggleTheme() },
+//        viewModelFactory = viewModelFactory,
+//        viewModel = viewModel,
+//        lazyListStateList,
+//        onClick = onClick
+//    )TODO()
 
 
 }

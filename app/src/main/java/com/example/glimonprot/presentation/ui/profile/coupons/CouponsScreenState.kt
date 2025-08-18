@@ -1,7 +1,6 @@
-package stud.gilmon.presentation.ui.profile.coupons
+package com.example.glimonprot.presentation.ui.profile.coupons
 
-import stud.gilmon.data.model.FeedItem
-import stud.gilmon.presentation.ui.Screen
+import com.example.glimonprot.domain.model.FeedItem
 
 sealed class CouponsScreenState {
 

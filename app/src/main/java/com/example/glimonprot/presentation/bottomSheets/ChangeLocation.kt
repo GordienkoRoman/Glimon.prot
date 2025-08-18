@@ -10,12 +10,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import stud.gilmon.presentation.components.CustomBottomSheetContainer
-import stud.gilmon.presentation.components.CustomButton
-import stud.gilmon.presentation.components.CustomText
-import stud.gilmon.presentation.components.LabelText
-import stud.gilmon.presentation.theme.TextFieldContainerColor
-import stud.gilmon.presentation.theme.YellowGlimon
+import com.example.glimonprot.presentation.components.CustomBottomSheetContainer
+import com.example.glimonprot.presentation.components.CustomButton
+import com.example.glimonprot.presentation.components.CustomText
+import com.example.glimonprot.presentation.components.LabelText
+import com.example.glimonprot.presentation.theme.TextFieldContainerColor
+import com.example.glimonprot.presentation.theme.YellowGlimon
 
 @Composable
 fun ChangeLocationBottomSheet(
