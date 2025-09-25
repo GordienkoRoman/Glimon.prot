@@ -106,7 +106,7 @@ class LoginViewModel @Inject constructor(
                     GithubAuthConfig.login -> {
                         remoteUserGithubInfoMutableStateFlow.value =
                             it as RemoteUser.RemoteGithubUser
-                        insertItem(it as RemoteUser)
+                        insertItem(it)
                     }
 
                     MailAuthConfig.login -> {
@@ -129,11 +129,11 @@ class LoginViewModel @Inject constructor(
     }
 
 
-    private fun insertItem(user: RemoteUser) {
+    private fun insertItem(user: RemoteUser.RemoteGithubUser) {
 
         when (config) {
             GithubAuthConfig -> {
-                val it = user as RemoteUser.RemoteGithubUser
+                val it = user
                 viewModelScope.launch {
                     try {
                         glimonRepository.upsertUser(
@@ -206,7 +206,7 @@ class LoginViewModel @Inject constructor(
     }
 
     fun openLoginPage(login: String) {
-        if (_userFlow.value.userId != null) {
+        if (_userFlow.value.userId != "") {
             viewModelScope.launch {
                 glimonRepository.setPrefUser(login)
                 authSuccessEventChannel.send(Unit)

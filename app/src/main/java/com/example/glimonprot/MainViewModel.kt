@@ -90,7 +90,9 @@ class MainViewModel @Inject constructor(
 //    }
 
      fun getUser(login: String) {
+
         viewModelScope.launch {
+         //   glimonRepository.setPrefUser("")
             userMutableFlow.value = glimonRepository.getUser(login)?: UsersEntity(userId = "")
             loadingMutableStateFlow.value = false
         }

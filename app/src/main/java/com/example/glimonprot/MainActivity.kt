@@ -55,7 +55,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         component.inject(this)
         super.onCreate(savedInstanceState)
-
         installSplashScreen().apply {
             setKeepOnScreenCondition {
                 viewModel.loadingFlow.value

@@ -127,9 +127,9 @@ object GithubAuthConfig : AuthConfig {
     override val RESPONSE_TYPE = ResponseTypeValues.CODE
     override val SCOPE = "user,repo"
 
-    override val CLIENT_ID = "0d07973a1740ad8d65a3"
-    override val CLIENT_SECRET = "b50a852533c99305339d8fdf9feec51f1d74499a"
-    override val CALLBACK_URL = "stud.oauth://github.com/callback"
+    override val CLIENT_ID = "Ov23liljs2aNTHaAV38p"
+    override val CLIENT_SECRET = "7e7c7b2f908111dfe663bf63b6bd027cfd9cfc01"
+    override val CALLBACK_URL = "com.example.glimonprot://github.com/callback"
     override val LOGOUT_CALLBACK_URL = "stud.oauth://github.com/logout_callback"
 }
 object MailAuthConfig : AuthConfig {
