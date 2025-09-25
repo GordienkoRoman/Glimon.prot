@@ -7,11 +7,9 @@ import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.safeContent
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -30,7 +28,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.LocalLifecycleOwner
-import androidx.lifecycle.viewmodel.viewModelFactory
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.example.glimonprot.data.remote.UnsplashDto
 import com.example.glimonprot.di.viewModelFactory.ViewModelFactory
@@ -39,7 +36,6 @@ import com.example.glimonprot.ui.theme.GlimonprotTheme
 import stud.gilmon.base.utils.launchAndCollectIn
 import javax.inject.Inject
 import kotlin.getValue
-import kotlin.setValue
 
 @ExperimentalMaterial3Api
 class MainActivity : ComponentActivity() {
@@ -69,11 +65,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             LockScreenOrientation(orientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
             val lifecycleOwner = rememberUpdatedState(LocalLifecycleOwner.current)
-//            viewModel.readFromDataStore.observe(this) {TODO()
-//               viewModel.getUser(it.toString())
-//                //login.value = it.toString()
-//               // user.value = viewModel.userFlow.value ?: user.value.copy()
-//            }
+            viewModel.readFromDataStore.observe(this) {
+               viewModel.getUser(it.toString())
+                //login.value = it.toString()
+               // user.value = viewModel.userFlow.value ?: user.value.copy()
+            }
 
 
             val photos = remember { mutableStateOf(listOf(UnsplashDto())) }
@@ -97,7 +93,6 @@ class MainActivity : ComponentActivity() {
                     val user = remember {
                         mutableStateOf(viewModel.userFlow)
                     }
-                  //  Test()
                     MainScreen(
                         darkTheme,
                         feedItems,
@@ -129,30 +124,3 @@ fun Context.findActivity(): Activity? = when (this) {
     is ContextWrapper -> baseContext.findActivity()
     else -> null
 }
-
-//@Composable
-//fun Test() {
-//
-//}
-//@Composable
-//fun lazycolumn() {
-//    LazyColumn(
-//        horizontalAlignment = Alignment.CenterHorizontally,
-//        modifier = Modifier
-//            .fillMaxSize()
-//            .background(MaterialTheme.colorScheme.background)
-//            .padding(
-//                bottom = 75.dp
-//            ),
-//        verticalArrangement = Arrangement.spacedBy(15.dp)
-//    ) {
-//        item{
-//            Box(
-//                modifier = Modifier
-//                    .background(Color.Black)
-//                    .fillMaxWidth()
-//                    .height(100.dp)
-//            )
-//        }
-//    }
-//}

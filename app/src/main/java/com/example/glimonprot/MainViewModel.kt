@@ -2,14 +2,14 @@ package com.example.glimonprot
 
 import android.content.Context
 import androidx.datastore.preferences.core.stringPreferencesKey
-import androidx.lifecycle.LiveData
+import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
 import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
+import com.example.glimonprot.data.GlimonRepositoryImpl
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
@@ -40,8 +40,8 @@ class MainViewModel @Inject constructor(
     { pagingSource.create() }.flow
         .stateIn(viewModelScope, SharingStarted.Lazily, PagingData.empty())
 
-    //    private val Context.dataStore by preferencesDataStore(name = "settings")
-//    private val dataStore = context.dataStore
+        private val Context.dataStore by preferencesDataStore(name = "settings")
+    private val dataStore = context.dataStore
     private val loadingMutableStateFlow = MutableStateFlow(true)
     val loadingFlow
         get() = loadingMutableStateFlow.asStateFlow()
@@ -51,7 +51,7 @@ class MainViewModel @Inject constructor(
     val remoteRandomPhotosStateFlow: Flow<List<UnsplashDto>?>
         get() = remoteRandomPhotosMutableStateFlow.asStateFlow()
     var login = ""
-   // val readFromDataStore = glimonRepository.loginFlow.asLiveData()
+    val readFromDataStore = (glimonRepository as GlimonRepositoryImpl).loginFlow.asLiveData()
 
     init {
 

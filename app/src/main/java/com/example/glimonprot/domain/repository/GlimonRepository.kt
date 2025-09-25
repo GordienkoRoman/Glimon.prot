@@ -23,4 +23,5 @@ interface GlimonRepository {
     suspend fun getUser(login: String): UsersEntity?
 
     suspend fun setPrefUser(login: String)
+
 }
