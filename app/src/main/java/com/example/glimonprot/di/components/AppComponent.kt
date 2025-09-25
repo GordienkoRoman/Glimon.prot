@@ -38,7 +38,7 @@ interface  AppComponent {
     @OptIn(ExperimentalMaterial3Api::class)
     fun inject(mainActivity: MainActivity)
 
-   // fun profileScreenComponentFactory():ProfileScreenComponent.Factory
+    fun profileScreenComponentFactory():ProfileScreenComponent.Factory
     @Component.Factory
     interface Factory {
 

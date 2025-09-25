@@ -58,7 +58,6 @@ import com.example.glimonprot.presentation.components.SelectButton
 import com.example.glimonprot.presentation.components.TwoRowsTopAppBar
 import com.example.glimonprot.presentation.theme.TextFieldContainerColor
 import com.example.glimonprot.presentation.theme.TextFieldLabelColor
-import example.glimonprot.presentation.ui.feed.FeedItemComponent
 import stud.gilmon.data.local.entities.UsersEntity
 import java.util.Locale
 

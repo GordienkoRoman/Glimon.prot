@@ -53,6 +53,7 @@ import com.example.glimonprot.presentation.components.LabelText
 import com.example.glimonprot.presentation.theme.TextFieldContainerColor
 import com.example.glimonprot.presentation.theme.TextFieldLabelColor
 import com.example.glimonprot.presentation.theme.YellowGlimon
+import com.example.glimonprot.presentation.ui.feed.feedItemScreen.FeedItemViewModel
 import stud.gilmon.data.local.entities.UsersEntity
 
 
@@ -67,21 +68,21 @@ fun FeedItemScreen(
     val viewModel: FeedItemViewModel = viewModel(factory = factory)
     val screenHeight = configuration.screenHeightDp.dp
     val height = remember { mutableStateOf(screenHeight - 100.dp) }
-    //TODO()
-    val feedItem = FeedItem(
-        companyName = "name",
-        promotionName =  "name",
-        description = "Description",
-        location =  "Location",
-        imgUrl = feedItem.imgUrl
-    )
+
 //    val feedItem = FeedItem(
-//        companyName = feedItem.companyName ?: "name",
-//        promotionName = feedItem.promotionName ?: "name",
-//        description = feedItem.location ?: "Description",
-//        location =feedItem.description?: "Location",
+//        companyName = "name",
+//        promotionName =  "name",
+//        description = "Description",
+//        location =  "Location",
 //        imgUrl = feedItem.imgUrl
 //    )
+    val feedItem = FeedItem(
+        companyName = feedItem.companyName ?: "name",
+        promotionName = feedItem.promotionName ?: "name",
+        description = feedItem.location ?: "Description",
+        location =feedItem.description?: "Location",
+        imgUrl = feedItem.imgUrl
+    )
     Surface {
         Image(
             painter = painterResource(id = R.drawable.ic_launcher_foreground),

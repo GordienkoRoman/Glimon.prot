@@ -21,9 +21,7 @@ import com.example.glimonprot.domain.repository.GlimonRepository
 @OptIn(FlowPreview::class)
 class FeedViewModel @Inject constructor(
     context: Context,
-    //TODO()
-    private val dataStoreRepository: GlimonRepository,
-    private val roomRepository: GlimonRepository,
+    private val glimonRepository: GlimonRepository
 ) : ViewModel() {
     private val _searchText = MutableStateFlow("")
     val searchText = _searchText.asStateFlow()

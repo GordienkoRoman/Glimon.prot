@@ -7,7 +7,7 @@ import com.example.glimonprot.presentation.ui.feed.FeedViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import example.glimonprot.presentation.ui.feed.FeedItemScreen.FeedItemViewModel
+import com.example.glimonprot.presentation.ui.feed.feedItemScreen.FeedItemViewModel
 import example.glimonprot.presentation.ui.login.LoginViewModel
 
 @Module

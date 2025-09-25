@@ -43,7 +43,7 @@ import com.example.glimonprot.presentation.components.CustomNavigationBar
 import com.example.glimonprot.presentation.theme.TextFieldLabelColor
 import com.example.glimonprot.presentation.ui.login.LoginScreen
 import com.example.glimonprot.presentation.ui.Screen
-import example.glimonprot.presentation.ui.feed.FeedItemComponent
+import com.example.glimonprot.presentation.ui.feed.FeedItemComponent
 import stud.gilmon.data.local.entities.UsersEntity
 
 @OptIn(ExperimentalMaterial3Api::class)

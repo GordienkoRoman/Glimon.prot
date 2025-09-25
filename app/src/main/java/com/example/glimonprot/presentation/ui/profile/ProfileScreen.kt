@@ -67,28 +67,28 @@ fun ProfileScreen(
     toggleTheme: () -> Unit,
     onClick: () -> Unit
 ) {
-//    val component =
-//        (LocalContext.current.applicationContext as BaseApplication).component
-//            .profileScreenComponentFactory()
-//            .create(user.userId)
-//    val viewModelFactory = component.getViewModelFactory()
-//    val viewModel: ProfileViewModel = viewModel(factory = viewModelFactory)
-//    val lazyListStateList: List<LazyListState> = listOf(
-//        rememberLazyListState(),
-//        rememberLazyListState(),
-//        rememberLazyListState()
-//    )
-//    //val  user = viewModel.getUser(login)
-//    MainContent(
-//        darkTheme = darkTheme,
-//        user = user,
-//        navController = navController,
-//        toggleTheme = { toggleTheme() },
-//        viewModelFactory = viewModelFactory,
-//        viewModel = viewModel,
-//        lazyListStateList,
-//        onClick = onClick
-//    )TODO()
+    val component =
+        (LocalContext.current.applicationContext as BaseApplication).component
+            .profileScreenComponentFactory()
+            .create(user.userId)
+    val viewModelFactory = component.getViewModelFactory()
+    val viewModel: ProfileViewModel = viewModel(factory = viewModelFactory)
+    val lazyListStateList: List<LazyListState> = listOf(
+        rememberLazyListState(),
+        rememberLazyListState(),
+        rememberLazyListState()
+    )
+    //val  user = viewModel.getUser(login)
+    MainContent(
+        darkTheme = darkTheme,
+        user = user,
+        navController = navController,
+        toggleTheme = { toggleTheme() },
+        viewModelFactory = viewModelFactory,
+        viewModel = viewModel,
+        lazyListStateList,
+        onClick = onClick
+    )
 
 
 }
